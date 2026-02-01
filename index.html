@@ -95,9 +95,7 @@
 
     .buttons {
       display: flex;
-      gap: 15px;
       justify-content: center;
-      flex-wrap: wrap;
     }
 
     .btn {
@@ -114,7 +112,16 @@
       color: #fff;
     }
 
-    /* ABOUT & CONTACT */
+    /* IMAGE UNDER BUTTON */
+    .shop-preview {
+      width: 100%;
+      max-width: 320px;
+      margin: 30px auto 0;
+      display: block;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+
     section {
       padding: 60px 20px;
       text-align: center;
@@ -148,11 +155,11 @@
 <!-- HERO -->
 <section class="hero" id="home">
   <img src="IMG_9352.jpeg" alt="Nermin Art">
-</div>
-      <h1>Welcome to Nermin Art Studio</h1>
 
-  <p>  
-    True art is when you feel the painting chose you… not the other way aro 
+  <h1>Welcome to Nermin Art Studio</h1>
+
+  <p>
+    True art is when you feel the painting chose you… not the other way aro
   </p>
 
   <div class="buttons">
@@ -160,14 +167,18 @@
       Shop Art Prints | تسوق اللوحات
     </a>
   </div>
+
+  <!-- IMAGE UNDER BUTTON -->
+  <img src="IMG_9288.jpeg" class="shop-preview" alt="Art Preview">
 </section>
 
 <!-- ABOUT -->
 <section id="about">
   <h2>About Me</h2>
-  <p>Welcome to my creative space 🤍  
+  <p>
+    Welcome to my creative space 🤍  
     I’m Nermin, an artist who turns emotions into visual stories.  
-    Here you’ll find art prints inspired by feelings, growth, and inner peace.   
+    Here you’ll find art prints inspired by feelings, growth, and inner peace.
   </p>
 </section>
 
@@ -187,4 +198,3 @@
 
 </body>
 </html>
-       
