@@ -1,78 +1,190 @@
-
-      
-          <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nermin Art</title>
+  <meta charset="UTF-8">
+  <title>Nermin Art Studio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-body{
-  margin:0;
-  font-family: Arial, sans-serif;
-  background:#f5f5f5;
-}
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #fafafa;
+      color: #222;
+    }
 
-/* ===== HERO SECTION ===== */
-.hero{
-  padding:40px 20px;
-  text-align:center;
-}
+    /* HEADER */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      background: #fff;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
 
-.hero h1{
-  font-size:32px;
-  margin-bottom:10px;
-}
+    .logo {
+      font-weight: bold;
+      font-size: 20px;
+    }
 
-.hero p{
-  color:#555;
-  margin-bottom:30px;
-}
+    #menu-toggle {
+      display: none;
+    }
 
-/* ===== IMAGE GRID ===== */
-.hero-images{
-  display:flex;
-  gap:15px;
-  justify-content:center;
-}
+    .menu-icon {
+      font-size: 26px;
+      cursor: pointer;
+    }
 
-.hero-images img{
-  width:100%;
-  max-width:300px;
-  height:400px;
-  object-fit:cover;
-  border-radius:15px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.15);
-}
+    nav {
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 10px 20px rgba(0,0,0,.15);
+      display: none;
+      flex-direction: column;
+      min-width: 160px;
+    }
 
-/* ===== MOBILE FIX ===== */
-@media (max-width:768px){
-  .hero-images{
-    flex-direction:column;
-    align-items:center;
-  }
+    nav a {
+      padding: 12px 18px;
+      text-decoration: none;
+      color: #222;
+      border-bottom: 1px solid #eee;
+    }
 
-  .hero-images img{
-    max-width:90%;
-    height:auto;
-  }
-}
-</style>
+    nav a:last-child {
+      border-bottom: none;
+    }
+
+    #menu-toggle:checked + label + nav {
+      display: flex;
+    }
+
+    /* HERO */
+    .hero {
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .hero img {
+      width: 100%;
+      max-width: 360px;
+      border-radius: 15px;
+      margin-bottom: 25px;
+    }
+
+    .hero h1 {
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 16px;
+      max-width: 520px;
+      margin: auto;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 12px 25px;
+      border-radius: 25px;
+      border: none;
+      font-size: 14px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .btn-shop {
+      background: #111;
+      color: #fff;
+    }
+
+    /* ABOUT & CONTACT */
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 13px;
+      color: #777;
+    }
+  </style>
 </head>
 
 <body>
 
-<section class="hero">
-  <h1>Welcome to Nermin Art Studio</h1>
-  <p>Where art speaks from the heart ✨</p>
+<header>
+  <div class="logo">Nermin Art</div>
 
-  <div class="hero-images">
-    <img src="IMG_9352.jpeg" alt="Nermin Art">
-    <img src="cover2.jpeg" alt="Nermin Art">
-    <img src="cover3.jpeg" alt="Nermin Art">
+  <input type="checkbox" id="menu-toggle">
+  <label for="menu-toggle" class="menu-icon">☰</label>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <img src="IMG_9352.jpeg" alt="Nermin Art">
+</div>
+      <h1>Welcome to Nermin Art Studio</h1>
+
+  <p>  
+    True art is when you feel the painting chose you… not the other way aro 
+  </p>
+
+  <div class="buttons">
+    <a href="shop.html" class="btn btn-shop">
+      Shop Art Prints | تسوق اللوحات
+    </a>
   </div>
 </section>
 
+<!-- ABOUT -->
+<section id="about">
+  <h2>About Me</h2>
+  <p>Welcome to my creative space 🤍  
+    I’m Nermin, an artist who turns emotions into visual stories.  
+    Here you’ll find art prints inspired by feelings, growth, and inner peace.   
+  </p>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact</h2>
+  <p>
+    WhatsApp: 01XXXXXXXXX  
+    <br>
+    Instagram: @nermin.art
+  </p>
+</section>
+
+<footer>
+  © 2026 Nermin Art Studio
+</footer>
+
 </body>
 </html>
+       
